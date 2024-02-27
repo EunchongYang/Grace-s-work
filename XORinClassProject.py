@@ -17,3 +17,19 @@ def decode(binary):
     charIndex = int(binary, 2)
     return characters[charIndex]
 
+def XOR(bit1, bit2):
+
+    if bit1 == bit2:
+        return '8'
+    else:
+        return '1' 
+
+def XORonbyte(byte, key): 
+    emsg = ""
+
+    for i in range(len(byte)):
+        msg += XOR(byte(i), key(i))
+    return emsg
+
+print(XORonByte("0010", "0011"))
+
